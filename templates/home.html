@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Gold price Prediction</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2 class="container-heading"; style="font-size: x-large;color:black;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;"><span class="heading_font">Gold Price Prediction - SARIMA</span></h2>
+        </div>
+        </div>
+        <p style="font-size:large;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;color:lavenderblush;margin-right: 2cm;margin-left: 2cm;">
+            Gold, the precious metal is one of the most sought-after assets during turbulent times. 
+            
+            India which is the gold loving county has greater affinity towards the metal and has occupied second position when it comes to consumption globally. 
+            It has a dual nature as an investment option and a luxury good. It is one of the safest bet to invest in as an asset.
+            
+        </p>
+
+        <p style="font-size: large;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;color:lavenderblush;margin-right: 2cm;margin-left: 2cm;">
+            Among the many ways in which Covid-19 has affected the economy, the most tangible outcome is the impact on inflation. 
+            Inflation is one of the most important reasons behind the change in gold rates. With rising inflation, gold rates usually gain, while inflation stays under control, gold rates too do not react bullishly.
+            Gold prices experienced a steep increase like never before from the past year. 
+
+        </p>
+
+        <p style="font-size: large;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;color:lavenderblush;margin-right: 2cm;margin-left: 2cm;">
+         A small attempt is made to study the hidden insights. Monthly gold prices from past 18 yrs are observed closely to analyse trends and 
+        patterns in the data as per the season / month of the year.
+        Finally, SARIMA is used to forecast gold prices till 2022 August.
+        </p>
+        </div>
+
+        <h2 style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sas-serif;font-size:xx-large;color: black;"><strong> Tableau Analysis & Visualization </strong></h3>
+        <div>
+            <div class='tableauPlaceholder' id='viz1639448529916' style='position:relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' /><param name='name' value='goldprice-analysis&#47;LineplotyearvsGold' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' 
+            value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1639448529916');                    var vizElement = divElement.getElementsByTagName('object')[0];
+                                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.5)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+                                 vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <form action = '/Name' method="POST">
+            <select>
+                <option value = 'price'>View the complete graph including forecast</option>
+            </select>
+            <button id="sub" type="submit">submit</button>
+        </form>
+
+        <table>
+            {% for table in tables %}
+            <h2>{{titles[loop.index]}}</h2>
+            {{ table|safe }}
+            {% endfor %}
+        </table>
+               
+        <style>
+    
+            body{
+                background-image:url("{{url_for('static',filename = 'pexels-kate-trifo-3851210.jpg') }}");
+                height: 100% ;
+                
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 120%;
+            }
+
+            body{
+                font-family: Arial, Helvetica,sans-serif;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+	            height: 100%;
+	            display: flex;
+	            flex-direction: column;
+            }
+
+
+            .container-heading
+            {
+                margin: 0;
+            }
+
+            #first {
+                width: 300px;
+                height: 50px;
+                text-align: center;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+
+            .heading_font{
+
+                font-size: 40px;
+            }
+
+            table.dataframe, .dataframe th, .dataframe td {
+                border: 6px;
+                border-bottom: 1px solid #C8C8C8;
+                border-collapse: collapse;
+                text-align:center;
+                padding: 10px;
+                margin-bottom: 40px;
+                font-size:small;
+                align-items: center;
+                table-layout: auto;
+            }
+
+
+        </style>
+    </body>
+</html>
